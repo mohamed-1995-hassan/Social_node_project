@@ -70,3 +70,14 @@ app.listen(PORT, () => {
 
 
 //mongodb+srv://nodeproject:<password>@cluster0.pilwp.mongodb.net/<dbname>?retryWrites=true&w=majority
+
+
+
+
+
+
+
+
+
+
+//https://mysocialblogs.herokuapp.com/
