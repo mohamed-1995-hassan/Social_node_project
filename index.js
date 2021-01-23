@@ -4,7 +4,39 @@ const routes = require('./routers');
 
 const app = express();
 
-mongoose.connect('mongodb://localhost:27017/project', { useUnifiedTopology: true });
+const { MONGODB_URI } = process.env; 
+
+mongoose.connect(MONGODB_URI, { useUnifiedTopology: true });
+
+//const connection = "mongodb+srv://nodeproject:520520782000@cluster0.pilwp.mongodb.net/project";
+
+// mongoose.connect(connection,{ useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false})
+//     .then(() => console.log("Database Connected Successfully"))
+//     .catch(err => console.log(err));
+
+
+    
+
+
+
+  //   const uri =
+  //   "mongodb+srv://M_Mustafa:m3523m1998@cluster0.kr8bd.mongodb.net/BloggerDB";
+  // mongoose
+  //   .connect(uri, {
+  //     useNewUrlParser: true,
+  //     useUnifiedTopology: true,
+  //     useFindAndModify: false,
+  //   })
+  //   .then(() => console.log("Database Connected Successfully"))
+  //   .catch((err) => console.log(err));
+
+
+
+
+
+
+
+
 
 app.use(express.json());
 
@@ -34,3 +66,7 @@ const { PORT = 3000 } = process.env;
 app.listen(PORT, () => {
   console.log('App is up and ready on:', PORT);
 });
+
+
+
+//mongodb+srv://nodeproject:<password>@cluster0.pilwp.mongodb.net/<dbname>?retryWrites=true&w=majority
