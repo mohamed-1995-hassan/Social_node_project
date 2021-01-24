@@ -27,7 +27,7 @@ router.get('/', async (req, res, next) => {
     // } catch (e) {
     //     next(e);
     // }
-    res3.send("hello")
+    res.send("hello")
 
 })
 
