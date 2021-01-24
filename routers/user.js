@@ -88,25 +88,26 @@ router.post('/FollowUser/:id', auth, async (req, res, next) => {
 
 router.post('/UN_FollowUser/:id', auth, async (req, res, next) => {
 
-    try {
-        const user2 = req.user;
-        const user1 = await getbyId(req.params.id);
-        const { body }=req
-        const u= await editeone(user2._id, { ...body ,$pull:{ Following: req.params.id }});
+    // try {
+    //     const user2 = req.user;
+    //     const user1 = await getbyId(req.params.id);
+    //     const { body }=req
+    //     const u= await editeone(user2._id, { ...body ,$pull:{ Following: req.params.id }});
 
-        for(let i=0;i<user2.Followers.length;i++)
-        {
-            if(equal(user1.Followers[i],user2._id))
-            {
-              //  user1.Followers.splice(i,1);
-              res.send("hello");
-            }
-        }
-        const u1= await editeone(user1._id, {...user1});
-        res.json(u1);
-    } catch (e) {
-        next(e)
-    }
+    //     for(let i=0;i<user2.Followers.length;i++)
+    //     {
+    //         if(equal(user1.Followers[i],user2._id))
+    //         {
+    //           //  user1.Followers.splice(i,1);
+    //           res.send("hello");
+    //         }
+    //     }
+    //     const u1= await editeone(user1._id, {...user1});
+    //     res.json(u1);
+    // } catch (e) {
+    //     next(e)
+    // }
+    res.send("hello");
 })
 
 
