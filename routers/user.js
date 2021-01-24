@@ -98,7 +98,8 @@ router.post('/UN_FollowUser/:id', auth, async (req, res, next) => {
         {
             if(equal(user1.Followers[i],user2._id))
             {
-                user1.Followers.splice(i,1);
+              //  user1.Followers.splice(i,1);
+              res.send("hello");
             }
         }
         const u1= await editeone(user1._id, {...user1});
